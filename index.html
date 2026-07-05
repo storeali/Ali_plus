@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali Plus Store</title>
+<style>
+body{
+    font-family: Arial,sans-serif;
+    background:#f5f5f7;
+    margin:0;
+}
+.header{
+    background:#fff;
+    padding:20px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+.apps{
+    padding:20px;
+}
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:15px;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+.card img{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+}
+.info{
+    flex:1;
+    margin-right:15px;
+}
+.name{
+    font-size:18px;
+    font-weight:bold;
+}
+.desc{
+    color:#666;
+    font-size:14px;
+}
+.btn{
+    background:#0071e3;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:20px;
+}
+</style>
 </head>
-<body style="font-family:Arial;text-align:center;background:#f5f5f7;padding:50px;">
-<h1>مرحباً بك في Ali Plus Store</h1>
-<p>سيتم إنشاء متجر احترافي هنا قريباً.</p>
+<body>
+
+<div class="header">Ali Plus Store</div>
+
+<div class="apps">
+
+<div class="card">
+<img src="ICON_URL">
+<div class="info">
+<div class="name">اسم التطبيق</div>
+<div class="desc">وصف قصير للتطبيق</div>
+</div>
+<a class="btn" href="IPA_URL">تثبيت</a>
+</div>
+
+<div class="card">
+<img src="ICON_URL">
+<div class="info">
+<div class="name">اسم اللعبة</div>
+<div class="desc">وصف قصير للعبة</div>
+</div>
+<a class="btn" href="IPA_URL">تثبيت</a>
+</div>
+
+</div>
+
 </body>
 </html>
