@@ -1,86 +1,202 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ali Plus Store</title>
-<style>
-body{
-    font-family: Arial,sans-serif;
-    background:#f5f5f7;
-    margin:0;
-}
-.header{
-    background:#fff;
-    padding:20px;
-    text-align:center;
-    font-size:30px;
-    font-weight:bold;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-.apps{
-    padding:20px;
-}
-.card{
-    background:#fff;
-    border-radius:20px;
-    padding:15px;
-    margin-bottom:15px;
-    display:flex;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-.card img{
-    width:70px;
-    height:70px;
-    border-radius:18px;
-}
-.info{
-    flex:1;
-    margin-right:15px;
-}
-.name{
-    font-size:18px;
-    font-weight:bold;
-}
-.desc{
-    color:#666;
-    font-size:14px;
-}
-.btn{
-    background:#0071e3;
-    color:white;
-    text-decoration:none;
-    padding:10px 20px;
-    border-radius:20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Plus Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary-gradient: linear-gradient(135deg, #ff007f, #7f00ff);
+            --text-color: #ffffff;
+            --text-muted: #8a99ad;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* الهيدر */
+        header {
+            text-align: center;
+            margin: 30px 0;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* الحاوية الرئيسية */
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* عنوان القسم */
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 25px 5px 15px 0;
+            color: #ff007f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* بطاقة التطبيق */
+        .app-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .app-card:active {
+            transform: scale(0.98);
+            border-color: rgba(255, 0, 127, 0.4);
+        }
+
+        .app-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        /* أيقونة التطبيق */
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            object-fit: cover;
+            background-color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .app-details h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .app-details p {
+            font-size: 12px;
+            color: var(--text-muted);
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* زر التثبيت */
+        .btn-install {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(127, 0, 255, 0.3);
+            transition: opacity 0.2s;
+        }
+
+        .btn-install:active {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">Ali Plus Store</div>
+    <header>
+        <h1>Ali Plus Store</h1>
+        <p>وجهتك الأولى لتطبيقات البلس والألعاب المعدلة</p>
+    </header>
 
-<div class="apps">
+    <div class="container">
+        
+        <!-- قسم التطبيقات -->
+        <div class="section-title">✨ تطبيقات البلس</div>
 
-<div class="card">
-<img src="ICON_URL">
-<div class="info">
-<div class="name">اسم التطبيق</div>
-<div class="desc">وصف قصير للتطبيق</div>
-</div>
-<a class="btn" href="IPA_URL">تثبيت</a>
-</div>
+        <!-- تطبيق 1 -->
+        <div class="app-card">
+            <div class="app-info">
+                <!-- استبدل الرابط أدناه برابط أيقونة التطبيق الحقيقية -->
+                <img src="https://via.placeholder.com/60" alt="Icon" class="app-icon">
+                <div class="app-details">
+                    <h3>سناب شات بلس</h3>
+                    <p>إعدادات متقدمة وحفظ السنابات</p>
+                </div>
+            </div>
+            <!-- ضع رابط الـ plist الخاص بالتثبيت مكان علامة # -->
+            <a href="itms-services://?action=download-manifest&url=رابط_ملف_الplist_هنا" class="btn-install">تثبيت</a>
+        </div>
 
-<div class="card">
-<img src="ICON_URL">
-<div class="info">
-<div class="name">اسم اللعبة</div>
-<div class="desc">وصف قصير للعبة</div>
-</div>
-<a class="btn" href="IPA_URL">تثبيت</a>
-</div>
+        <!-- تطبيق 2 -->
+        <div class="app-card">
+            <div class="app-info">
+                <img src="https://via.placeholder.com/60" alt="Icon" class="app-icon">
+                <div class="app-details">
+                    <h3>إنستقرام بلس</h3>
+                    <p>تحميل الفيديوهات والقصص بضغطة زر</p>
+                </div>
+            </div>
+            <a href="itms-services://?action=download-manifest&url=رابط_ملف_الplist_هنا" class="btn-install">تثبيت</a>
+        </div>
 
-</div>
+        <!-- قسم الألعاب -->
+        <div class="section-title">🎮 الألعاب المعدلة</div>
+
+        <!-- لعبة 1 -->
+        <div class="app-card">
+            <div class="app-info">
+                <img src="https://via.placeholder.com/60" alt="Icon" class="app-icon">
+                <div class="app-details">
+                    <h3>ببجي موبايل</h3>
+                    <p>نسخة معدلة بمميزات حصرية</p>
+                </div>
+            </div>
+            <a href="itms-services://?action=download-manifest&url=رابط_ملف_الplist_هنا" class="btn-install">تثبيت</a>
+        </div>
+
+    </div>
 
 </body>
 </html>
