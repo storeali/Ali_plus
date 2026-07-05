@@ -2,9 +2,10 @@
   "name": "Ali Plus Store",
   "container": [
     {
-      "name": "ببجي موبايل معدلة",
+      "name": "انستا فول وفلافل",
       "version": "1.0",
-      "downUrl": "ضع_رابط_ملف_الـ_IPA_المباشر_هنا",
+      "downUrl": "https://qp1e.pike.replit.dev/Beegram_2.2.ipa",
+
       "icon": "https://via.placeholder.com/60",
       "description": "نسخة معدلة بمميزات حصرية"
     }
